@@ -1,0 +1,26 @@
+(defwidget _powermenu [
+	lockscreen lockscreen_icon
+	suspend suspend_icon
+	logout logout_icon
+	reboot reboot_icon
+	shutdown shutdown_icon
+	]
+	(box :class "power-box"
+		:spacing 8
+		:vexpand true
+		:hexpand true
+		:valign "end"
+		:halign "end"
+		:space-evenly true
+		(button :class "lockscreen_button"
+			:onclick "$HOME/eww/target/release/eww close powermenu && ${lockscreen}" lockscreen_icon)
+		(button :class "suspend_button"
+			:onclick "$HOME/eww/target/release/eww close powermenu && ${suspend} ; ${lockscreen}" suspend_icon)
+		(button :class "logout_button"
+			:onclick "$HOME/eww/target/release/eww close powermenu && ${logout}" logout_icon)
+		(button :class "reboot_button"
+			:onclick "$HOME/eww/target/release/eww close powermenu && ${reboot}" reboot_icon)
+		(button :class "shutdown_button"
+			:onclick "/$HOME/eww/target/release/eww close powermenu && ${shutdown}" shutdown_icon)
+	)
+) 

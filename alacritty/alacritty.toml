@@ -1,0 +1,22 @@
+import = [ "~/.config/alacritty/colors.toml" ]
+
+[window.padding]
+x = 10
+y = 10
+
+[window]
+opacity = 1
+[shell]
+program = "/usr/bin/zsh"
+[cursor]
+style = "Underline"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "Fira Code Nerd Font"
+# family = "SFMono"
+
+[mouse]
+hide_when_typing = true
